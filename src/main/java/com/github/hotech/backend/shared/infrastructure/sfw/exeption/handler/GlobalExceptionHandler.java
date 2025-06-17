@@ -1,6 +1,6 @@
-package com.github.hotechstarplatinummicroservicemessage.shared.infrastructure.sfw.exeption.handler;
+package com.github.hotech.backend.shared.infrastructure.sfw.exeption.handler;
 
-import com.github.hotechbackend.shared.domain.aggregates.MessageResponse;
+import com.github.hotech.backend.shared.domain.aggregates.MessageResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +17,7 @@ public class GlobalExceptionHandler {
     private static Logger LOGGER = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
     @ExceptionHandler({RuntimeException.class})
-    public ResponseEntity<MessageResponse> handleRuntimeException(RuntimeException e) {
+    public ResponseEntity<com.github.hotech.backend.shared.domain.aggregates.MessageResponse> handleRuntimeException(RuntimeException e) {
         LOGGER.error("Debugging error", e);
         return ResponseEntity.badRequest().body(new MessageResponse(e.getMessage()));
     }

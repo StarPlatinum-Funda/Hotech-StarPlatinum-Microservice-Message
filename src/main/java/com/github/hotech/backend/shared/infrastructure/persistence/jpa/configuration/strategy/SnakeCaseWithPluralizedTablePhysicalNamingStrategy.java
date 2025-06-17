@@ -1,4 +1,4 @@
-package com.github.hotechstarplatinummicroservicemessage.shared.infrastructure.persistence.jpa.configuration.strategy;
+package com.github.hotech.backend.shared.infrastructure.persistence.jpa.configuration.strategy;
 
 import org.hibernate.boot.model.naming.Identifier;
 import org.hibernate.boot.model.naming.PhysicalNamingStrategy;

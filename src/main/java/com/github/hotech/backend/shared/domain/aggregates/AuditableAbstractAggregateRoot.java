@@ -1,18 +1,23 @@
-package com.github.hotechstarplatinummicroservicemessage.shared.domain.entities;
+package com.github.hotech.backend.shared.domain.aggregates;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.EntityListeners;
-import jakarta.persistence.MappedSuperclass;
+import jakarta.persistence.*;
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.domain.AbstractAggregateRoot;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.util.Date;
 
 @EntityListeners(AuditingEntityListener.class)
 @MappedSuperclass
-public class AuditableModel {
+public class AuditableAbstractAggregateRoot<T extends AbstractAggregateRoot<T>> extends AbstractAggregateRoot<T> {
+
+    @Id
+    @Getter
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     @Getter
     @CreatedDate
     @Column(nullable = false, updatable = false)
@@ -22,4 +27,5 @@ public class AuditableModel {
     @LastModifiedDate
     @Column(nullable = false)
     private Date updatedAt;
+
 }
