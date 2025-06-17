@@ -1,6 +1,6 @@
 package com.github.hotech.backend.iam.domain.model.commands;
 
-import com.github.hotechbackend.iam.domain.model.entities.Role;
+import com.github.hotech.backend.iam.domain.model.entities.Role;
 
 import java.util.List;
 
