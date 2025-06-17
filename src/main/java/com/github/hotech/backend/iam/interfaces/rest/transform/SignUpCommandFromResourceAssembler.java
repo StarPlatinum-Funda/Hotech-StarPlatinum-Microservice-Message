@@ -1,8 +1,8 @@
 package com.github.hotech.backend.iam.interfaces.rest.transform;
 
-import com.github.hotechbackend.iam.domain.model.commands.SignUpCommand;
-import com.github.hotechbackend.iam.domain.model.entities.Role;
-import com.github.hotechbackend.iam.interfaces.rest.resources.SignUpResource;
+import com.github.hotech.backend.iam.domain.model.commands.SignUpCommand;
+import com.github.hotech.backend.iam.domain.model.entities.Role;
+import com.github.hotech.backend.iam.interfaces.rest.resources.SignUpResource;
 
 import java.util.ArrayList;
 
