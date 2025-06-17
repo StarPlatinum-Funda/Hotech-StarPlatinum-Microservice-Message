@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.github</groupId>
-    <artifactId>Hotech-StarPlatinum-Microservice-Message</artifactId>
+    <artifactId>Hotech-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Hotech-StarPlatinum-Microservice-Message</name>
     <description>Hotech-StarPlatinum-Microservice-Message</description>

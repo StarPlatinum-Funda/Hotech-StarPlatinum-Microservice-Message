@@ -1,4 +1,4 @@
-package com.github.hotechstarplatinummicroservicemessage;
+package com.github.hotechbackend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

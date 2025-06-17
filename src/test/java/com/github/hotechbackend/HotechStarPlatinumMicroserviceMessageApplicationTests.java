@@ -1,4 +1,4 @@
-package com.github.hotechstarplatinummicroservicemessage;
+package com.github.hotechbackend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
