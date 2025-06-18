@@ -11,6 +11,6 @@ import java.util.Optional;
 public interface MessageCommandService {
     Optional<Message> handle(CreateMessageCommand command);
     Optional<Message> handle(UpdateMessageCommand command);
-    Optional<Message> handle(DeleteMessageCommand command);
+    void handle(DeleteMessageCommand command);
     void handle(MarkMessageAsReadCommand command);
 }
