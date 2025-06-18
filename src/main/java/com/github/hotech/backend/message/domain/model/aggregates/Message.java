@@ -62,6 +62,16 @@ public class Message extends AuditableAbstractAggregateRoot<Message> {
         this.userAccountId = new UserAccountId(command.userAccountId());
     }
 
+    public Message updateInformation(String receptor, String sender, String content, Long notificationId, Long userAccountId) {
+        this.receptor = receptor;
+        this.sender = sender;
+        this.content = content;
+        this.sendMessage();
+        this.notificationId = new NotificationId(notificationId);
+        this.userAccountId = new UserAccountId(userAccountId);
+        return this;
+    }
+
     public void sendMessage() {
         this.status = MessageStatus.SEND;
         this.registerEvent(new MessageCreatedEvent(this, this.getId()));
