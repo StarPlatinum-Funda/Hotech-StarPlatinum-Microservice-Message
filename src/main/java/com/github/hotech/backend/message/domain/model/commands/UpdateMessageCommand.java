@@ -1,0 +1,9 @@
+package com.github.hotech.backend.message.domain.model.commands;
+
+public record UpdateMessageCommand(Long id,
+                                   String receptor,
+                                   String sender,
+                                   String content,
+                                   Long notificationId,
+                                   Long userAccountId) {
+}
