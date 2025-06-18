@@ -1,6 +1,7 @@
 package com.github.hotech.backend.message.application.internal.queryservives;
 
 import com.github.hotech.backend.message.domain.model.aggregates.Message;
+import com.github.hotech.backend.message.domain.model.queries.GetAllMessagesQuery;
 import com.github.hotech.backend.message.domain.model.queries.GetMessageByIdQuery;
 import com.github.hotech.backend.message.domain.model.queries.GetMessagesByNotificationIdAndUserAccountIdQuery;
 import com.github.hotech.backend.message.domain.model.valueobjects.NotificationId;
@@ -28,5 +29,10 @@ public class MessageQueryServiceImpl implements MessageQueryService {
     @Override
     public List<Message> handle(GetMessagesByNotificationIdAndUserAccountIdQuery query) {
         return messageRepository.getMessageByNotificationIdAndUserAccountId(new NotificationId(query.notificationId()), new UserAccountId(query.userAccountId()));
+    }
+
+    @Override
+    public List<Message> handle(GetAllMessagesQuery query) {
+        return messageRepository.findAll();
     }
 }
